@@ -59,8 +59,9 @@
       <li class="nav-item">
       <a class="nav-link" href="{{ route('publishers.show') }}">Maisons d'édition</a>
       </li>
+      <li><a href="{{ route('books.create') }}" class=" nav-link">Enregistrer un livre</a></li>
     </ul>
-    <button class="btn btn-outline-primary"> <a href="{{ route('books.create') }}" class=" btn btn-connect">Enregistrer un livre</a></button>
+    
     <form action="{{ route('logout') }}" method="POST" class="d-flex" role="search">
     @csrf
     @method('delete')

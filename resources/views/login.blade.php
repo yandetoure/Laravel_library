@@ -35,6 +35,37 @@
         .form-control {
             border-radius: 5px;
         }
+        .btn-primary {
+            background-color: #fff;
+            border: 2 solid #0148AD;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin-left: 0px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            width: 100%;
+            color: #0148AD;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0148AD;
+        }
+        .text-center a {
+            text-decoration: none;
+        }
+        span{
+            color: #1E4C72;
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+        }
+        a{
+            text-decoration: none;
+            margin-left: 140px;
+        }
+        
     </style>
 </head>
 <body>
@@ -57,11 +88,12 @@
                 <label for="password" class="label-form">Mot de passe</label>
                 <input type="password" name="password" class="form-control" id="password" placeholder="*******" >
             </div>
-            <div class="mb-3">
-        <div class="d-grid">
-            <button class="btn btn-primary">Connexion</button>
-        </div>
-      </div>
+            <div class="flex items-center justify-end mt-4 text">
+
+            <button type="submit" class="btn btn-primary" name="submit">Connexion</button>
+
+            <div class="bouton"><a href="{{route('signup') }} ">Vous n'avez pas encore de compte ? <span>S'inscrire</span> </a> </div>
+            </div>
         </form>
       </div>
  

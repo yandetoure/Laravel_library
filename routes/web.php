@@ -48,7 +48,6 @@ Route::prefix('shelves')->name('shelves.')->middleware('auth')->group(function (
     Route::delete('/{shelve}', [ShelveController::class, 'destroy'])->name('destroy');
 });
 Route::prefix('books')->name('books.')->middleware('auth')->group(function () {
-    Route::get('/show', [BookController::class, 'index'])->name('show');
     Route::get('/books/{id}/more', [BookController::class, 'more'])->name('more');
     Route::get('/create', [BookController::class, 'create'])->name('create');
     Route::post('/', [BookController::class, 'store'])->name('store');
@@ -56,6 +55,8 @@ Route::prefix('books')->name('books.')->middleware('auth')->group(function () {
     Route::put('/{book}', [BookController::class, 'update'])->name('update');
     Route::delete('/{book}', [BookController::class, 'destroy'])->name('destroy');
 });
+Route::get('books/show', [BookController::class, 'index'])->name('books.show');
+
 Route::prefix('students')->name('students.')->middleware('auth')->group(function () {
     Route::get('/show', [StudentController::class, 'index'])->name('show');
     Route::get('/create', [StudentController::class, 'create'])->name('create');
